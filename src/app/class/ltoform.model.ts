@@ -1,0 +1,35 @@
+export interface LTOForm {
+    uid: string;
+    familyName: string;
+    firstName: string;
+    middleName: string;
+    presentAddress: string;
+    contactNumber: string;
+    TIN: string;
+    nationality: string;
+    sex: string;
+    birthday: string;
+    height: string;
+    weight: string;
+    licenseNumber: string;
+    status: string;
+    birthplace: string;
+    fatherName: string;
+    motherName: string;
+    spouseName: string;
+    employersBusinessName: string;
+    employerTelNo: string;
+    employerAddress: string;
+    emergencyPerson: string;
+    emergencyAddress: string;
+    emergencyContact: String;
+    agencyCode: string;
+    issueDate: string;
+    expiryDate: string;
+    lca: string;
+    drivingSkill: string;
+    EA: string;
+    bloodType: string;
+    organDonor: string;
+    TOA: string
+}

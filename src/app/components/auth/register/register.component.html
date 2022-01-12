@@ -1,0 +1,41 @@
+<form class="row g-3">
+    <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" #email id="email">
+    </div>
+    <div class="col-md-6">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" #username id="username">
+    </div>
+    <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" #password id="password">
+    </div>
+    <div class="col-md-6">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" #confirmPassword id="confirmPassword">
+    </div>
+    <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" #firstName id="firstName">
+    </div>
+    <div class="col-md-6">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" #lastName id="lastName">
+    </div>
+    <div class="col-md-12">
+        <label for="contactNumber" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" #contactNumber id="contactNumber">
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="alert != ''">
+        {{alert}}
+    </div>
+
+    <div class="col-12">
+        <button type="button"
+            (click)="register(email.value, username.value, password.value, confirmPassword.value, firstName.value, lastName.value, contactNumber.value)"
+            class="btn btn-primary">Register</button>
+    </div>
+    <p>Already created an account? <a href="/login">Log in</a> </p>
+</form>
