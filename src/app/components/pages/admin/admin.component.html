@@ -13,8 +13,57 @@
             <td>{{ user.firstName }}</td>
             <td>{{ user.familyName }}</td>
             <td>
-                <span routerLink="/update-user/{{user.uid}}" class="text-primary">Edit</span>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    View
+                </button>
             </td>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Family Name: {{ user.familyName }}</p>
+                            <p>firstName: {{ user.firstName }}</p>
+                            <p>middleName: {{ user.middleName }}</p>
+                            <p>presentAddress: {{ user.presentAddress }}</p>
+                            <p>contactNumber: {{ user.contactNumber }}</p>
+                            <p>TIN: {{ user.TIN }}</p>
+                            <p>nationality: {{ user.nationality }}</p>
+                            <p>sex: {{ user.sex }}</p>
+                            <p>height: {{ user.height }}</p>
+                            <p>weight: {{ user.weight }}</p>
+                            <p>licenseNumber: {{ user.licenseNumber }}</p>
+                            <p>fatherName: {{ user.fatherName }}</p>
+                            <p>motherName: {{ user.motherName }}</p>
+                            <p>spouseName: {{ user.spouseName }}</p>
+                            <p>employersBusinessName: {{ user.employersBusinessName }}</p>
+                            <p>employerTelNo: {{ user.employerTelNo }}</p>
+                            <p>employerAddress: {{ user.employerAddress }}</p>
+                            <p>emergencyPerson: {{ user.emergencyPerson }}</p>
+                            <p>emergencyAddress: {{ user.emergencyAddress }}</p>
+                            <p>emergencyContact: {{ user.emergencyContact }}</p>
+                            <p>agencyCode: {{ user.agencyCode }}</p>
+                            <p>issueDate: {{ user.issueDate }}</p>
+                            <p>expiryDate: {{ user.expiryDate }}</p>
+                            <p>lca: {{ user.lca }}</p>
+                            <p>drivingSkill: {{ user.drivingSkill }}</p>
+                            <p>EA: {{ user.EA }}</p>
+                            <p>bloodType: {{ user.bloodType }}</p>
+                            <p>organDonor: {{ user.organDonor }}</p>
+                            <p>TOA: {{ user.TOA }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </tr>
     </tbody>
 </table>

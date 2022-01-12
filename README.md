@@ -1,5 +1,14 @@
 # LagangAssessment
 
+You can access the deployed website through this link `https://lagang-assessment.web.app/login`
+
+How to run locally:
+
+1. open in vscode
+2. install angular cli
+3. go to project root and run "ng serve --open"
+4. a webpage will automatically open
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server
