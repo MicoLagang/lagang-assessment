@@ -10,6 +10,8 @@ import { AuthServiceService } from './auth-service.service';
 export class LTOformProcessService {
   formData: LTOForm = {
     uid: "",
+    id: "",
+    formStatus: '',
     familyName: "",
     firstName: "",
     middleName: "",
@@ -17,12 +19,12 @@ export class LTOformProcessService {
     contactNumber: "",
     TIN: "",
     nationality: "",
-    sex: "",
+    sex: "Male",
     birthday: "",
     height: "",
     weight: "",
     licenseNumber: "",
-    status: "",
+    status: "Single",
     birthplace: "",
     fatherName: "",
     motherName: "",
@@ -36,18 +38,24 @@ export class LTOformProcessService {
     agencyCode: "",
     issueDate: "",
     expiryDate: "",
-    lca: "",
+    lca: "Student-Driver's Permit (SP)",
     drivingSkill: "",
-    EA: "",
+    EA: "Post Graduate",
     bloodType: "",
-    organDonor: "",
-    TOA: ""
+    organDonor: "Yes",
+    organDonated: "",
+    eyesColor: "",
+    TOA: "NEW",
+    vehicleCatExist: "",
+    vehicleCatApply: "",
+    SV: "",
+    clutchType: ""
   }
 
   formGroup = new FormGroup({
     firstName: new FormControl(this.formData.firstName, [Validators.required]),
     familyName: new FormControl(this.formData.familyName, [Validators.required]),
-    middleName: new FormControl(this.formData.middleName, [Validators.required]),
+    middleName: new FormControl(this.formData.middleName),
     presentAddress: new FormControl(this.formData.presentAddress, [Validators.required]),
     contactNumber: new FormControl(this.formData.contactNumber, [Validators.required]),
     TIN: new FormControl(this.formData.TIN, [Validators.required]),
@@ -61,7 +69,7 @@ export class LTOformProcessService {
     birthplace: new FormControl(this.formData.birthplace, [Validators.required]),
     fatherName: new FormControl(this.formData.fatherName, [Validators.required]),
     motherName: new FormControl(this.formData.motherName, [Validators.required]),
-    spouseName: new FormControl(this.formData.spouseName, [Validators.required]),
+    spouseName: new FormControl(this.formData.spouseName),
     employersBusinessName: new FormControl(this.formData.employersBusinessName, [Validators.required]),
     employerTelNo: new FormControl(this.formData.employerTelNo, [Validators.required]),
     employerAddress: new FormControl(this.formData.employerAddress, [Validators.required]),
@@ -76,7 +84,13 @@ export class LTOformProcessService {
     EA: new FormControl(this.formData.EA, [Validators.required]),
     bloodType: new FormControl(this.formData.bloodType, [Validators.required]),
     organDonor: new FormControl(this.formData.organDonor, [Validators.required]),
+    organDonated: new FormControl(this.formData.organDonated),
+    eyesColor: new FormControl(this.formData.eyesColor, [Validators.required]),
     TOA: new FormControl(this.formData.TOA, [Validators.required]),
+    vehicleCatExist: new FormControl(this.formData.vehicleCatExist),
+    vehicleCatApply: new FormControl(this.formData.vehicleCatApply, [Validators.required]),
+    SV: new FormControl(this.formData.SV),
+    clutchType: new FormControl(this.formData.clutchType, [Validators.required]),
   })
 
   constructor(
@@ -91,10 +105,20 @@ export class LTOformProcessService {
       .snapshotChanges();
   }
 
+  approve(id: string) {
+    console.log(id)
+    this.firestore.collection('APPLICATION').doc(id).update({ formStatus: 'approve' });
+  }
+
+  decline(id: string) {
+    this.firestore.collection('APPLICATION').doc(id).update({ formStatus: 'decline' });
+  }
+
   saveInfo() {
     console.log(this.formGroup.value)
     let data = {
       uid: this.authService.userData.uid,
+      formStatus: 'pending',
       familyName: this.formGroup.get('familyName').value,
       firstName: this.formGroup.get('firstName').value,
       middleName: this.formGroup.get('middleName').value,
@@ -126,10 +150,15 @@ export class LTOformProcessService {
       EA: this.formGroup.get('EA').value,
       bloodType: this.formGroup.get('bloodType').value,
       organDonor: this.formGroup.get('organDonor').value,
-      TOA: this.formGroup.get('TOA').value
+      organDonated: this.formGroup.get('organDonated').value,
+      eyesColor: this.formGroup.get('eyesColor').value,
+      TOA: this.formGroup.get('TOA').value,
+      vehicleCatExist: this.formGroup.get('vehicleCatExist').value,
+      vehicleCatApply: this.formGroup.get('vehicleCatApply').value,
     }
     this.firestore.collection('APPLICATION').add(data).then((result) => {
       window.alert('Your form submitted successfully');
+      this.formGroup.reset();
     }).catch((error) => {
       window.alert(error);
     })

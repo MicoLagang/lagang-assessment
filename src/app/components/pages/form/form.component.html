@@ -1,0 +1,507 @@
+<h1 class="mb-5">LTO-ADL-Form</h1>
+
+<form [formGroup]="this.formService.formGroup" (ngSubmit)="onSubmit()" class="mb-5">
+    <div class="row">
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input value="test value" formControlName="familyName" type="text" class="form-control" required
+                    id="floatingPassword">
+                <label for="floatingPassword">familyName</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="firstName" type="text" class="form-control" required id="floatingInput">
+                <label for="floatingInput">First Name</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="middleName" type="text" class="form-control" id="floatingPassword">
+                <label for="floatingPassword">middleName</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-floating mb-3">
+                <input formControlName="presentAddress" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">presentAddress</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-floating mb-3">
+                <input formControlName="contactNumber" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">contactNumber</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-floating mb-3">
+                <input formControlName="TIN" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">TIN</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <input formControlName="nationality" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">nationality</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-floating mb-3">
+                <select formControlName="sex" class="form-select" aria-label="Default select example">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <label for="floatingPassword">Sex</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <input formControlName="birthday" class="form-control" type="date" name='date_of_birth'>
+                <label for="floatingPassword">Birthday</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-floating mb-3">
+                <input formControlName="height" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">height</label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-floating mb-3">
+                <input formControlName="weight" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">weight</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <select formControlName="status" class="form-select" aria-label="Default select example">
+                    <option value="Single" selected>Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Separated">Separated</option>
+                </select>
+                <label for="floatingPassword">Civil Status</label>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="form-floating mb-3">
+                <input formControlName="birthplace" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">birthplace</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input formControlName="fatherName" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">fatherName</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input formControlName="motherName" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">motherName</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input formControlName="spouseName" type="text" class="form-control" id="floatingPassword">
+                <label for="floatingPassword">spouseName</label>
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="my-5">
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <div class="form-floating mb-3">
+                <input formControlName="employersBusinessName" type="text" class="form-control" required
+                    id="floatingPassword">
+                <label for="floatingPassword">employersBusinessName</label>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-floating mb-3">
+                <input formControlName="employerTelNo" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">employerTelNo</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input formControlName="employerAddress" type="text" class="form-control" required id="floatingPassword">
+        <label for="floatingPassword">employerAddress</label>
+    </div>
+
+
+    <hr class="my-5">
+
+
+    <div class="form-floating mb-3">
+        <input formControlName="emergencyPerson" type="text" class="form-control" required id="floatingPassword">
+        <label for="floatingPassword">emergencyPerson</label>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="emergencyAddress" type="text" class="form-control" required
+                    id="floatingPassword">
+                <label for="floatingPassword">emergencyAddress</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="emergencyContact" type="text" class="form-control" required
+                    id="floatingPassword">
+                <label for="floatingPassword">emergencyContact</label>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+
+    <div class="form-floating mb-3">
+        <input formControlName="agencyCode" type="text" class="form-control" required id="floatingPassword">
+        <label for="floatingPassword">agencyCode</label>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <div class="form-floating mb-3">
+                <input formControlName="issueDate" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">issueDate</label>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-floating mb-3">
+                <input formControlName="expiryDate" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">expiryDate</label>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="col-md-8">
+        <div class="form-floating mb-3">
+            <input formControlName="licenseNumber" type="text" class="form-control" required id="floatingPassword">
+            <label for="floatingPassword">licenseNumber</label>
+        </div>
+    </div>
+    <div class="form-floating mb-3">
+        <select formControlName="lca" class="form-select" aria-label="Default select example">
+            <option value="Student-Driver's Permit (SP)" selected>Student-Driver's Permit (SP)</option>
+            <option value="Driver's License (DL)">Driver's License (DL)</option>
+            <option value="Conductor's License (CL)">Conductor's License (CL)</option>
+        </select>
+        <label for="floatingPassword">Licencse Classification Applied For (LCA)</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input formControlName="drivingSkill" type="text" class="form-control" required id="floatingPassword">
+        <label for="floatingPassword">DRIVING SKILL ACQUIRED FROM (FOR DL APPLICANTS ONLY)</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select formControlName="EA" class="form-select" aria-label="Default select example">
+            <option value="Post Graduate" selected>Post Graduate</option>
+            <option value="College">College</option>
+            <option value="High School">High School</option>
+            <option value="Elementary">Elementary</option>
+        </select>
+        <label for="floatingPassword">HIGHEST EDUCATIONAL ATTAINMENT (EA)</label>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="bloodType" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">bloodType</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <select formControlName="organDonor" class="form-select" aria-label="Default select example">
+                    <option value="Yes" selected>Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingPassword">Organ Donor</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="organDonated" type="text" class="form-control" id="floatingPassword">
+                <label for="floatingPassword">If Yes (Organ Donated)</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input formControlName="eyesColor" type="text" class="form-control" required id="floatingPassword">
+                <label for="floatingPassword">Eyes Color</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="form-floating mb-3">
+            <select formControlName="TOA" class="form-select" required aria-label="Default select example">
+                <option value="NEW" selected>NEW</option>
+                <option value="RENEWAL">RENEWAL</option>
+                <option value="CONVERSION OF FOREIGN DL">CONVERSION OF FOREIGN DL</option>
+                <option value="ADDITIONAL CODE OR CATEGORY">ADDITIONAL CODE OR CATEGORY</option>
+                <option value="CHANGE OF DL CLASSIFICATION">CHANGE OF DL CLASSIFICATION</option>
+                <option value="EXPIRED DL WITH VALID FDL">EXPIRED DL WITH VALID FDL</option>
+                <option value="DROPPING OF CATEGORY OR ADD'L OR REMOVAL OF DRIVING CONDITIONS">
+                    DROPPING OF CATEGORY OR ADD'L OR REMOVAL OF DRIVING CONDITIONS</option>
+                <option value="CHANGE ADDRESS">CHANGE ADDRESS</option>
+                <option value="CHANGE CIVIL STATUS">CHANGE CIVIL STATUS</option>
+                <option value="CHANGE NAME">CHANGE NAME</option>
+                <option value="CHANGE BIRTH DATE">CHANGE BIRTH DATE</option>
+                <option Others="Others">Others</option>
+                <option value="ENHANCEMENT OF DL">ENHANCEMENT OF DL</option>
+                <option value="CHANGE OF CLUTCH TYPE">CHANGE OF CLUTCH TYPE</option>
+            </select>
+            <label for="floatingPassword">Type of Application</label>
+        </div>
+    </div>
+
+    <h4>Existing</h4>
+
+    <div class="col-md">
+        <div class="form-floating mb-3">
+            <select formControlName="vehicleCatExist" class="form-select" aria-label="Default select example">
+                <option value="" selected></option>
+                <option value="MOTORCYCLE">MOTORCYCLE</option>
+                <option value="TRICYCLE">TRICYCLE</option>
+                <option value="B">B</option>
+            </select>
+            <label for="floatingPassword">Vehicle Category</label>
+        </div>
+    </div>
+
+    <ng-container *ngIf="this.formService.formGroup.get('vehicleCatExist').value != ''" class="mb-5">
+        <div class="form-check">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                SV
+            </label>
+        </div>
+
+        <div *ngIf="this.formService.formGroup.get('vehicleCatExist').value == 'MOTORCYCLE'">
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L1 Two wheels with a maximum design speed not exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L2 Three wheels with a maximum design speed not exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L3 Two wheels with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+        </div>
+
+        <div *ngIf="this.formService.formGroup.get('vehicleCatExist').value == 'TRICYCLE'">
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L4 Motorcycle with side cars with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L5 Three wheels symmetrically arranged with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L6 Four wheels whose unladen mass is not more than 350kg with maximum design speed not exceeding 45
+                    kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L7 Four wheels whose unladen mass is not more than 550kg with maximum design speed not exceeding 45
+                    kph
+                </label>
+            </div>
+        </div>
+
+        <div class="form-check" *ngIf="this.formService.formGroup.get('vehicleCatExist').value == 'B'">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                M1 Vehicles used for the carriage of passengers and comprising not more than 8 seats in addition to the
+                driver's seat with GVW up to 5000kgs
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                PRO
+            </label>
+        </div>
+
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <select formControlName="clutchType" class="form-select" aria-label="Default select example">
+                    <option value="AT" selected>AT</option>
+                    <option value="MT">MT</option>
+                </select>
+                <label for="floatingPassword">Clutch Type</label>
+            </div>
+        </div>
+    </ng-container>
+
+
+    <h4>Applied For</h4>
+
+    <div class="col-md">
+        <div class="form-floating mb-3">
+            <select formControlName="vehicleCatApply" class="form-select" aria-label="Default select example">
+                <option value="" selected></option>
+                <option value="MOTORCYCLE">MOTORCYCLE</option>
+                <option value="TRICYCLE">TRICYCLE</option>
+                <option value="B">B</option>
+            </select>
+            <label for="floatingPassword">Vehicle Category</label>
+        </div>
+    </div>
+
+    <ng-container *ngIf="this.formService.formGroup.get('vehicleCatApply').value != ''">
+        <div class="form-check">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                SV
+            </label>
+        </div>
+
+        <div *ngIf="this.formService.formGroup.get('vehicleCatApply').value == 'MOTORCYCLE'">
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L1 Two wheels with a maximum design speed not exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L2 Three wheels with a maximum design speed not exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L3 Two wheels with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+        </div>
+
+        <div *ngIf="this.formService.formGroup.get('vehicleCatApply').value == 'TRICYCLE'">
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L4 Motorcycle with side cars with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L5 Three wheels symmetrically arranged with a maximum design speed exceeding 50 kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L6 Four wheels whose unladen mass is not more than 350kg with maximum design speed not exceeding 45
+                    kph
+                </label>
+            </div>
+            <div class="form-check">
+                <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    L7 Four wheels whose unladen mass is not more than 550kg with maximum design speed not exceeding 45
+                    kph
+                </label>
+            </div>
+        </div>
+
+        <div class="form-check" *ngIf="this.formService.formGroup.get('vehicleCatApply').value == 'B'">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                M1 Vehicles used for the carriage of passengers and comprising not more than 8 seats in addition to the
+                driver's seat with GVW up to 5000kgs
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input formControlName="SV" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                PRO
+            </label>
+        </div>
+
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <select formControlName="clutchType" class="form-select" aria-label="Default select example">
+                    <option value="AT" selected>AT</option>
+                    <option value="MT">MT</option>
+                </select>
+                <label for="floatingPassword">Clutch Type</label>
+            </div>
+        </div>
+    </ng-container>
+
+
+
+
+    <div class="alert alert-danger" role="alert" *ngIf="alert != ''">
+        {{alert}}
+    </div>
+
+
+    <div *ngIf="this.formService.formGroup.controls['firstName'].invalid &&
+        (this.formService.formGroup.controls['firstName'].dirty||
+        this.formService.formGroup.controls['firstName'].touched)" style="color: red;">
+        <div *ngIf="this.formService.formGroup.controls['firstName'].errors?.['required']">
+            Please enter first name
+        </div>
+    </div>
+    <div *ngIf="this.formService.formGroup.controls['familyName'].invalid &&
+        (this.formService.formGroup.controls['familyName'].dirty||
+        this.formService.formGroup.controls['familyName'].touched)" style="color: red;">
+        <div *ngIf="this.formService.formGroup.controls['familyName'].errors?.['required']">
+            Please enter family name
+        </div>
+    </div>
+
+    <div *ngIf="!this.formService.formGroup.valid" style="color: red;">
+        Please input all required fields
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-5" [disabled]="!this.formService.formGroup.valid">Submit</button>
+</form>

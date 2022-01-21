@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'services-offered', loadChildren: () => import('./components/pages/services-offered/services-offered.module').then(m => m.ServicesOfferedModule) },
   { path: 'contact-information', loadChildren: () => import('./components/pages/contact-information/contact-information.module').then(m => m.ContactInformationModule) },
   { path: 'technology-stack', loadChildren: () => import('./components/pages/technology-stack/technology-stack.module').then(m => m.TechnologyStackModule) },
-  { path: 'admin', loadChildren: () => import('./components/pages/admin/admin.module').then(m => m.AdminModule) }
+  { path: 'admin', loadChildren: () => import('./components/pages/admin/admin.module').then(m => m.AdminModule), canActivate: [AuthGuard] },
+  { path: 'form', loadChildren: () => import('./components/pages/form/form.module').then(m => m.FormModule), canActivate: [AuthGuard] }
 ];
 
 @NgModule({

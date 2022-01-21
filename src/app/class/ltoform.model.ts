@@ -1,5 +1,7 @@
 export interface LTOForm {
     uid: string;
+    id: string;
+    formStatus: string;
     familyName: string;
     firstName: string;
     middleName: string;
@@ -31,5 +33,11 @@ export interface LTOForm {
     EA: string;
     bloodType: string;
     organDonor: string;
-    TOA: string
+    organDonated: string;
+    eyesColor: string;
+    TOA: string;
+    vehicleCatExist: string;
+    vehicleCatApply: string;
+    SV: string;
+    clutchType: string;
 }

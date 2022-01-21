@@ -23,9 +23,9 @@ export class RegisterComponent implements OnInit {
       this.alert = "Your password does not match!"
     } else {
       this.authService.register(email, password).then((result) => {
-        console.log(result);
+        console.log(result.user.uid);
         this.router.navigate(['/landing'])
-        this.authService.SetUserData(username, firstName, lastName, contactNumber)
+        this.authService.SetUserData(username, firstName, lastName, contactNumber, result)
           .then((result) => console.log(result))
           .catch((error) => console.log(error))
       }).catch((error) => {
